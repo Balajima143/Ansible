@@ -1,0 +1,20 @@
+--- 
+- name: uninstall apache 
+  hosts: webservrs 
+  become: true 
+  tasks: 
+  - name: stop httpd 
+    service: 
+      name: httpd 
+      state: stopped 
+       
+  - name: uninstall httpd 
+    yum: 
+      name: httpd 
+      state: removed 
+
+
+
+
+#   sudo vi uninstall.yml 
+#   ansible-playbook uninstall.yml 

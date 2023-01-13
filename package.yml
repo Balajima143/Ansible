@@ -1,0 +1,13 @@
+--- 
+- name: insatall-package-playbook 
+  hosts: all 
+  become: true 
+  tasks: 
+  - name: install-git 
+    yum: 
+      name: git 
+      state: insatalled 
+
+
+#  sudo vi package.yml 
+#   ansible-palybook package.yml 

@@ -1,0 +1,21 @@
+--- 
+- name: install apache 
+  hosts: webservers
+  become: true 
+  tasks: 
+  - name: install httpd  
+    yum: 
+      nmae: httpd 
+      state: insatalled 
+
+
+  - name: start service 
+    service: 
+      name: httpd 
+      state: started 
+
+
+
+
+#   sudo vi install apache.yml  
+#   ansible-playbook install apache.yml

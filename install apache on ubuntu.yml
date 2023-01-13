@@ -1,0 +1,19 @@
+--- 
+- name: install apache on ubuntu 
+  hosts: dbservers 
+  become: true 
+  tasks: 
+  - name: install apache 
+    apt: 
+      name: apache 
+      state: present 
+  - name: startservice 
+    service: 
+      name: apache 
+      state: started 
+
+
+
+
+#   sudo vi install apache on ubuntu.yml 
+#   ansible-playbook install apache on ubuntu.yml
