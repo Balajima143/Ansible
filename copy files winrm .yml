@@ -1,0 +1,5 @@
+- name: Copy files to Windows VM
+  ansible.windows.win_file:
+    src: /path/to/local/file
+    dest: C:\path\on\remote\machine
+    state: copy
